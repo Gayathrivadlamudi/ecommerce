@@ -7,8 +7,7 @@ class AuthSignUp {
 final supabase=Supabase.instance.client;
 Future<void> onSignUp(String email,String password)async{
   try{
-    //we use maybe single to check if the email already exists in the database and it will return null if it doesn't exist and the user data if it exists
-     final userAlredyExists=await supabase.from('registered_customers').select('email').eq('email',email).maybeSingle();
+    final userAlredyExists=await supabase.from('registered_customers').select('email').eq('email',email).maybeSingle();
      if(userAlredyExists!=null){
       Get.snackbar("Error", "Email already exists. Please login.");
       return;

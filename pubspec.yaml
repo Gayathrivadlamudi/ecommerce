@@ -37,6 +37,8 @@ dependencies:
   get: ^4.7.3
   firebase_auth: ^6.3.0
   supabase_flutter: ^2.12.2
+  cached_network_image: ^3.4.1
+  speech_to_text: ^7.3.0
 
 dev_dependencies:
   flutter_test:
